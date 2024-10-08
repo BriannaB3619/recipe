@@ -64,6 +64,7 @@ table {
 html{
 	margin:10px;
 	width:414px;
+	background-color: var(--lightest-grey);
 }
 
 body{
@@ -71,6 +72,9 @@ body{
 }
 
 header{
+display:grid;
+grid-template-columns: 1fr;
+grid-template-rows: 1fr 1fr;
 
 }
 
@@ -102,6 +106,10 @@ ul li{
 
 h1{
 	font-size: 40px;
+	position:relative;
+	justify-items: center;
+	align-self: baseline;
+	display:grid;
 }
 
 h2{
@@ -113,13 +121,71 @@ h3{
 }
 
 #tools{
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	position:relative;
+	justify-content: center;
+}
 
+#tools svg[class~="download"]{
+	grid-row:1/2 ;
+	grid-column: 1/2;
+}
+
+#tools svg[class~="share"]{
+	grid-row: 1/2;
+	grid-column: 2/3;
+}
+
+#tools svg[class~="printer"]{
+	grid-row: 1/2;
+	grid-column: 3/4;
+}
+
+#tools svg[class~="symlink"]{
+	grid-row: 1/2: ;
+	grid-column: 4/5;
+}
+
+#tools li a{
+	text-decoration: none;
+	color:var(--orange);
+	
 }
 
 #tools li{
-
+	display:flex;
+	justify-content: center;
 }
 
+#tools li:nth-child(1) p{
+	grid-row: 2/3;
+	grid-column: 1/2;
+	position: relative;
+	left:10px;
+}
+
+#tools li:nth-child(2) p{
+	grid-row: 2/3;
+	grid-column: 2/3;
+	left:10px;
+	position: relative;
+}
+
+#tools li:nth-child(3) p{
+	grid-row: 2/3;
+	grid-column: 3/4;
+	left:20px;
+	position: relative;
+}
+
+#tools li:nth-child(4) p{
+	grid-row: 2/3;
+	grid-column: 4/5;
+	right:10px;
+	position: relative;
+}
 #tools li a{
 
 }
