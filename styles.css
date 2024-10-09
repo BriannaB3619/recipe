@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -48,11 +51,9 @@ table {
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root{
-    --headerfont: 'Bebas Neue, sans-serif';
-    --regfont:'Montserrat, sans-serif';
+    --headerfont: 'Bebas Neue', 'sans-serif';
+    --regfont:'Montserrat', 'sans-serif';
     --dark-grey:#0D0D0D;
     --lightest-grey:#F2F2F2;
     --baby-blue:#7ABFBF;
@@ -62,19 +63,23 @@ table {
 }
 
 html{
-	margin:10px;
+	
 	width:414px;
 	background-color: var(--lightest-grey);
 }
 
 body{
 	display:grid;
+	width:414px;	
 }
 
 header{
 display:grid;
 grid-template-columns: 1fr;
 grid-template-rows: 1fr 1fr;
+width:414px;
+position:relative;
+top:55px;
 
 }
 
@@ -110,10 +115,15 @@ h1{
 	justify-items: center;
 	align-self: baseline;
 	display:grid;
+	top: 75px;
 }
 
 h2{
 	font-size: 30px;
+	padding-bottom: 25px;
+	padding-top:5px;
+	display:flex;
+	justify-content: center;
 }
 
 h3{
@@ -126,6 +136,7 @@ h3{
 	grid-template-rows: 1fr 1fr;
 	position:relative;
 	justify-content: center;
+	width:414px;
 }
 
 #tools svg[class~="download"]{
@@ -144,7 +155,7 @@ h3{
 }
 
 #tools svg[class~="symlink"]{
-	grid-row: 1/2: ;
+	grid-row: 1/2 ;
 	grid-column: 4/5;
 }
 
@@ -157,6 +168,11 @@ h3{
 #tools li{
 	display:flex;
 	justify-content: center;
+}
+
+#tools li{
+	position:relative;
+	right:10px;
 }
 
 #tools li:nth-child(1) p{
@@ -176,71 +192,110 @@ h3{
 #tools li:nth-child(3) p{
 	grid-row: 2/3;
 	grid-column: 3/4;
-	left:20px;
 	position: relative;
 }
 
 #tools li:nth-child(4) p{
 	grid-row: 2/3;
 	grid-column: 4/5;
-	right:10px;
+	width:127px;
 	position: relative;
 }
-#tools li a{
 
+#tools li:nth-child(4) button{
+	position:relative;
+	left:30px;
+}
+
+#tools li:nth-child(3) button{
+position:relative;
+right:10px;
 }
 
 main{
-
+max-width:414px;
 }
 
-main img{
-
-}
-
-h2{
-
+main img[alt~="street"]{
+	max-width: 100%;
+  	height: auto;
 }
 
 main p{
+line-height: 1.5;
+padding: 10px 5px;
+width:414px;
+box-sizing: border-box;
+}
 
+span{
+	font-weight: 700;
 }
 
 main ul{
-
+	line-height:2;
+	list-style-type: square;
+	box-sizing: border-box;
+	padding-left:25px;
 }
-
-main ul li{
-
-}
-
 
 main ol{
-
+	line-height:2;
+	list-style-type:decimal;
+	box-sizing: border-box;
+	padding-left:25px;
 }
 
 main ol li{
-
+	padding:5px 0;
 }
 
-section{
-
+#secondrecipe{
+	background-color: var(--baby-blue);
+	margin-top:10px;
 }
 
-section h3{
-
+.side-dishes{
+	display:grid;
+	width:414px;
+	grid-template-columns:1fr 1fr;
+	grid-template-rows: 1fr 1fr 2fr;
 }
 
-section img{
 
+#secondrecipe h2{
+	padding-top:10px;
 }
 
-section p{
-
+.side-dishes h3{
+	grid-column: 2/3;
+	grid-row:1/2;
+	position:relative;
+	top:10px;
+	height:30px;
+	width:250px;
 }
 
-section div{
+.side-dishes img{
+	grid-column:1/2;
+	grid-row:1/4 ;
+	width:100px;
+	height: auto;
+	padding:20px;
+}
 
+.side-dishes p{
+	grid-column:2/3;
+	grid-row:2/3;
+	width:250px;
+}
+
+.side-dishes div{
+	grid-column:2/3;
+	grid-row:3/4;
+	position:relative;
+	bottom:10px;
+	width:250px;
 }
 
 div{
@@ -320,5 +375,6 @@ footer p{
 }
 
 footer img{
-
+	max-width: 100%;
+	height: auto;
 }
