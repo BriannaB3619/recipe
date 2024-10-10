@@ -316,10 +316,12 @@ nav{
 
 .avatar{
 	position: relative;
-    left: 274px;
+    left: 320px;
     display: flex;
-    width: 100px;
+    width: 75px;
     bottom: 190px;
+    box-sizing: border-box;
+}
 }
 
 #menu-svg{
@@ -335,9 +337,9 @@ nav{
 }
 
 .avatar a{
-	width:100px;
-	position: relative;
-    left: 35px;
+	width: 70px;
+    position: relative;
+    box-sizing: border-box;
 }
 
 .dropdown {
@@ -357,9 +359,9 @@ nav{
 	left: -20px;
 }
 
-  
-  .dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
 	display: block;
+	transition: all 2s ease-in;
 }
 
 menu{
@@ -404,7 +406,7 @@ menu p{
 	position: relative;
     width: 200px;
     height: 80px;
-    left: 80px;
+    left: 72px;
     bottom: 100px;
     background-color: var(--orange);
     border: var(--orange);
