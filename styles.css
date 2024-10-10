@@ -71,15 +71,17 @@ html{
 body{
 	display:grid;
 	width:414px;	
+	box-sizing: border-box;
 }
 
 header{
-display:grid;
-grid-template-columns: 1fr;
-grid-template-rows: 1fr 1fr;
-width:414px;
-position:relative;
-top:55px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 414px;
+    position: relative;
+    top: 100px;
+	box-sizing: border-box;
 
 }
 
@@ -89,10 +91,6 @@ h1, h2, h3, nav, menu li, #social li, footer{
 
 nav, menu li, #social li, footer{
 	font-size:20px;
-}
-
-svg{
-
 }
 
 p, dd, li, nav, input{
@@ -137,6 +135,7 @@ h3{
 	position:relative;
 	justify-content: center;
 	width:414px;
+	box-sizing: border-box;
 }
 
 #tools svg[class~="download"]{
@@ -214,6 +213,9 @@ right:10px;
 
 main{
 max-width:414px;
+position:relative;
+top:50px;
+box-sizing: border-box;
 }
 
 main img[alt~="street"]{
@@ -253,6 +255,7 @@ main ol li{
 #secondrecipe{
 	background-color: var(--baby-blue);
 	margin-top:10px;
+	box-sizing: border-box;
 }
 
 .side-dishes{
@@ -260,6 +263,7 @@ main ol li{
 	width:414px;
 	grid-template-columns:1fr 1fr;
 	grid-template-rows: 1fr 1fr 2fr;
+	box-sizing: border-box;
 }
 
 
@@ -298,83 +302,186 @@ main ol li{
 	width:250px;
 }
 
-div{
-
-}
-
-div p{
-
-}
-
-div svg{
-
-}
-
 nav{
-
+	position: relative;
+    bottom: 3280px;
+    padding-left: 20px;
+    display: grid;
+    width: 414px;
+	height:80px;
+    grid-template-columns: 1fr 1fr 1fr;
+    box-sizing: border-box;
+	background-color:#ffffff;
 }
 
-nav h2{
-
+.avatar{
+	position: relative;
+    left: 274px;
+    display: flex;
+    width: 100px;
+    bottom: 190px;
 }
 
-nav button{
-
+#menu-svg{
+	position:relative;
+	left:10px;
 }
 
-nav svg{
+.avatar p{
+	position: relative;
+    right: 25px;
+    font-weight: 700;
+	color:var(--dark-grey);
+}
 
+.avatar a{
+	width:100px;
+	position: relative;
+    left: 35px;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: var(--lightest-grey);
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 12px 16px;
+	z-index: 1;
+	top: 80px;
+	left: -20px;
+}
+
+  
+  .dropdown:hover .dropdown-content {
+	display: block;
+}
+
+menu{
+	list-style-type: none;
+	text-decoration: none;
+	width:80px;
 }
 
 menu button{
-
+width:100px;
+height:auto;
 }
 
 menu li{
+	padding:5px 0;
 
 }
 
-menu svg{
-
+menu div li a img{
+width:100px;
+height:auto;
+max-width:100%;
+justify-content: center;
 }
 
 menu a{
-
+	text-decoration: none;
+	color:var(--orange);
+	padding:10px;
+	font-weight: 600;
+	display:grid;
+	justify-content: center;
 }
 
-#site-search{
-
+menu p{
+ 	width:100px;
+	height:50px;
+	justify-self: center;
 }
 
-#searchicon{
-
+.home-logo{
+	position: relative;
+    width: 200px;
+    height: 80px;
+    left: 80px;
+    bottom: 100px;
+    background-color: var(--orange);
+    border: var(--orange);
 }
 
-#searchicon svg{
+.search{
+    position: relative;
+    bottom: 3270px;
+    left: 72px;
+	width:254px;
+}
 
+.search button{
+	width: 50px;
+    height: auto;
+    position: relative;
+    top: 10px;
+    border: 2px solid var(--orange);
+    background-color: var(--orange);
+}
+
+input{
+	height: 45px;
+    border: 2px solid var(--orange);
+    position: relative;
+    left: 4px;
 }
 
 #social{
+	position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    bottom: 70px;
+    justify-content: center;
+    width: 414px;
+	box-sizing: border-box;
+}
 
+#social:nth-child(4){
+	right:30px;
 }
 
 #social a{
-
+	width: 103px;
+    position: relative;
+    left: 35px;
+    text-decoration: none;
+    color: var(--orange);
+    font-weight: 600;
+}
+#social a p{
+	position: relative;
+    right: 19px;
+	padding:0 2px;
 }
 
-#social svg{
 
-}
 
 footer{
-
+	width:414px;
+	box-sizing: border-box;
 }
 
-footer p{
-
+footer .copy{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 200px;
+    font-weight: 600;
 }
 
 footer img{
-	max-width: 100%;
 	height: auto;
+    width: 200px;
+    position: relative;
+    left: 100px;
+    bottom: 75px;
+    padding: 5px;
+    
 }
